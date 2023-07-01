@@ -2,21 +2,26 @@ package inheritance;
 
 import java.time.*;
 
-public class Employee {
-    private String name;
+
+public class Employee extends Person{
     private double salary;
     private LocalDate hireDay;
 
 
     public Employee(String name, double salary, int year, int month, int day){
-        this.name = name;
+        super(name);
         this.salary = salary;
         this.hireDay = LocalDate.of(year, month, day);
 
     }
 
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
     public String getName(){
-        return this.name;
+        return super.getName();
     }
 
     public double getSalary(){
