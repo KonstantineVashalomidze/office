@@ -27,4 +27,17 @@ public class Manager extends Employee{
         this.bonus = b;
     }
 
+    @Override
+    public boolean equals(Object otherObject){
+        if (!super.equals(otherObject)) return false;
+        // Super.equals checked that this and otherObject belong to the same class
+        Manager other = (Manager) otherObject;
+        return this.bonus == other.bonus;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + "[bonus=" + this.bonus + "]";
+    }
+
 }
